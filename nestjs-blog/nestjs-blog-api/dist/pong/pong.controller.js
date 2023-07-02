@@ -16,41 +16,41 @@ exports.PongController = void 0;
 const common_1 = require("@nestjs/common");
 let PongController = exports.PongController = class PongController {
     constructor() {
-        this.paddleX = 0;
+        this.paddleY = 0;
         this.paddleSpeed = 9;
         this.callCnt = 0;
     }
     getPaddlePositionQ(direction) {
-        if (direction === 'left') {
-            this.paddleX -= this.paddleSpeed;
+        if (direction === 'up') {
+            this.paddleY -= this.paddleSpeed;
         }
-        else if (direction === 'right') {
-            this.paddleX += this.paddleSpeed;
+        else if (direction === 'down') {
+            this.paddleY += this.paddleSpeed;
         }
-        return { paddlePosX: this.paddleX };
+        return { paddlePosY: this.paddleY };
     }
     async getPaddlePosition() {
-        return { paddlePosX: this.paddleX };
+        return { paddlePosY: this.paddleY };
     }
     async setPaddlePosition(body) {
-        this.paddleX = body.paddlePosX;
+        this.paddleY = body.paddlePosY;
     }
 };
 __decorate([
-    (0, common_1.Get)('/paddlePosX'),
+    (0, common_1.Get)('/paddlePosY'),
     __param(0, (0, common_1.Query)('direction')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Object)
 ], PongController.prototype, "getPaddlePositionQ", null);
 __decorate([
-    (0, common_1.Get)('/paddlePosX'),
+    (0, common_1.Get)('/paddlePosY'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], PongController.prototype, "getPaddlePosition", null);
 __decorate([
-    (0, common_1.Post)('/paddlePosX'),
+    (0, common_1.Post)('/paddlePosY'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),

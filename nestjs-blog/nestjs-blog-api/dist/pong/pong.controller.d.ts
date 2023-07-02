@@ -1,14 +1,14 @@
 export declare class PongController {
-    private paddleX;
+    private paddleY;
     private paddleSpeed;
     private callCnt;
     getPaddlePositionQ(direction: string): {
-        paddlePosX: number;
+        paddlePosY: number;
     };
     getPaddlePosition(): Promise<{
-        paddlePosX: number;
+        paddlePosY: number;
     }>;
     setPaddlePosition(body: {
-        paddlePosX: number;
+        paddlePosY: number;
     }): Promise<void>;
 }
