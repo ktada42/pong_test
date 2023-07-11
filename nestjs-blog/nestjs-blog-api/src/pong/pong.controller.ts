@@ -123,7 +123,10 @@ export class PongController {
 			ballVY *= 1.1;
 			let paddleMidY = (paddleTop + paddleBot) / 2;
 			let ballMidY = (ballNTop + ballNBot) / 2;
-			//上からぶつかっている
+			//yベクトルを反転する実装にすると
+			//ボールが上から下へ動いていて
+			//パドルも上から下へ動いてぶつかった時にボールが上に跳ね返ることになりおかしくなるため
+			//このような実装になっている
 			if (paddleMidY > ballMidY)
 			{
 				ballVY = Math.abs(ballVY) * -1;
