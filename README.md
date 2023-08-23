@@ -1,6 +1,6 @@
 フォルダ構成について
 nestjs-blogフォルダ内の
-nestjs-blog-frontendフォルダがclient
+nestjs-blog-frontendフォルダがclient。
 serverフォルダがbackendです。
 nestjs-blog-apiは過去にnest.jsでbackendを実装した時の名残で現在は使っていません。
 
