@@ -1,3 +1,11 @@
+フォルダ構成について
+nestjs-blogフォルダ内の
+nestjs-blog-frontendフォルダがclient
+serverフォルダがbackendです。
+nestjs-blog-apiは過去にnest.jsでbackendを実装した時の名残で現在は使っていません。
+
+
+
 frontendの処理は
 nestjs-blog/nestjs-blog-frontend/src/components/pongSocket.tsx
 
